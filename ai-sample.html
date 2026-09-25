@@ -1,231 +1,203 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
-    <title>My Personal Website / Portfolio</title>
+    <title>My Portfolio Page!!!</title>
+    <!-- Forget to add meta viewport tag for mobile screens -->
     <style>
+        /* Mixing pixel layouts with inline attributes */
         body {
-            background-color: lightcyan;
-            font-family: "Comic Sans MS", "Arial", sans-serif;
-            color: #333333;
+            background-color: lightyellow;
+            font-family: "Times New Roman", Arial, sans-serif;
+            color: #000000;
             margin: 0px;
-            padding: 0px;
         }
 
-        header {
-            background-color: darkblue;
-            color: white;
-            padding: 20px;
-            text-align: center;
-        }
-
+        /* Styling tags directly everywhere */
         h1 {
-            font-size: 36px;
-            margin: 0;
-        }
-
-        nav {
-            background-color: yellow;
-            padding: 10px;
-            text-align: center;
-            border-top: 2px solid black;
-            border-bottom: 2px solid black;
-        }
-
-        nav a {
             color: blue;
-            font-weight: bold;
-            font-size: 18px;
-            margin-left: 15px;
-            margin-right: 15px;
+            text-align: center;
+            font-size: 35px;
             text-decoration: underline;
         }
 
-        nav a:hover {
-            color: red;
-            background-color: lightgreen;
-        }
-
-        .main-container {
-            width: 800px;
-            margin-left: auto;
-            margin-right: auto;
-            background-color: white;
+        .header-bg {
+            background-color: cyan;
             padding: 20px;
-            border: 3px dashed blue;
-            margin-top: 20px;
-            margin-bottom: 20px;
+            border-bottom: 5px solid red;
         }
 
-        .profile-img {
-            width: 200px;
-            height: 200px;
-            border: 5px solid red;
-            border-radius: 10px;
-        }
-
-        .section-title {
-            background-color: orange;
-            color: white;
-            padding: 5px;
-            font-size: 22px;
-            margin-top: 30px;
-        }
-
-        footer {
-            background-color: black;
-            color: white;
-            text-align: center;
-            padding: 15px;
-            font-size: 12px;
-        }
-
-        table {
+        /* Fixed width layout that breaks on smaller screens */
+        #mainContainer {
+            width: 900px;
+            background-color: white;
             border: 2px solid black;
-            width: 100%;
-            background-color: lightyellow;
-        }
-
-        th {
-            background-color: magenta;
-            color: white;
-        }
-
-        td {
-            border: 1px solid gray;
-            text-align: center;
-            padding: 8px;
-        }
-
-        .button-style {
-            background-color: green;
-            color: white;
-            font-size: 16px;
             padding: 10px;
-            border: 2px solid black;
-            cursor: pointer;
+        }
+
+        /* Duplicate styles with conflicting names */
+        .title1 {
+            font-weight: bold;
+            font-size: 20px;
+            color: red;
+        }
+
+        .title-text {
+            font-weight: normal;
+            color: green;
+        }
+
+        .button {
+            background-color: yellow;
+            color: blue;
+            font-size: 18px;
+            border: 3px ridge red;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <h1>Welcome To My Awesome Website!!!</h1>
-        <p><i>"Hello world! This is my personal portfolio homepage."</i></p>
-    </header>
+    <div class="header-bg">
+        <h1>Welcome To My Homepage!</h1>
+        <center>
+            <!-- Using deprecated <center> and <font> tags -->
+            <font size="4" color="purple"><i>"Student, Creator, and Designer"</i></font>
+        </center>
+    </div>
 
-    <nav>
-        <a href="#about">About Me</a> | 
-        <a href="#skills">My Skills</a> | 
-        <a href="#projects">Projects</a> | 
-        <a href="#contact">Contact Me</a>
-    </nav>
+    <!-- Navigation built with unclosed breaks or simple non-breaking spaces -->
+    <center>
+        <p>
+            <a href="#about">About Me</a> &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#projects">Projects</a> &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#skills">Skills</a> &nbsp;&nbsp;&nbsp;&nbsp;
+            <a href="#contact">Contact</a>
+        </p>
+    </center>
 
-    <marquee bgcolor="pink" behavior="scroll" direction="left" scrollamount="5">
-        <b><font color="darkred" size="4">*** WELCOME TO MY PAGE! FEEL FREE TO LOOK AROUND AND LEAVE A MESSAGE! ***</font></b>
-    </marquee>
+    <hr size="4" color="blue">
 
-    <div class="main-container">
+    <center>
+    <div id="mainContainer">
 
-        <!-- About Me Section -->
-        <a name="about"></a>
-        <h2 class="section-title">About Me</h2>
-        <table border="0" width="100%">
+        <!-- Unclosed marquee tag causing full container scrolling in older parsers -->
+        <marquee behavior="scroll" direction="left" bgcolor="pink">
+            *** Hello! Thanks for visiting my portfolio website! ***
+        </marquee>
+
+        <br><br>
+
+        <!-- Section 1: About Me -->
+        <a name="about">
+        <h2><u>ABOUT ME</u></h2>
+        <!-- Using table for page layout instead of flexbox or grid -->
+        <table border="1" cellpadding="10" width="100%">
             <tr>
-                <td width="30%" style="border:none;">
-                    <img src="https://via.placeholder.com/200" alt="My Picture" class="profile-img">
+                <td width="30%">
+                    <!-- Broken relative image path / missing alt text -->
+                    <img src="images/my_photo.jpg" width="200" height="200">
                 </td>
-                <td width="70%" style="border:none; text-align:left; padding-left:20px;">
-                    <p><b>Name:</b> Student Developer</p>
-                    <p><b>Hobby:</b> Coding, Gaming, Listening to Music</p>
-                    <p><b>Favorite Food:</b> Pizza and Ice Cream</p>
-                    <p>Hello! Welcome to my official online portfolio! I am currently learning how to build websites using HTML and CSS. This is my very first homepage built from scratch without using any templates!</p>
+                <td width="70%" align="left">
+                    <p><b>Name:</b> Student</p>
+                    <p><b>Course:</b> Arts / Technology</p>
+                    <p><b>Location:</b> Philippines</p>
+                    <p>Welcome to my site! I am creating this portfolio to show my works and projects. I am currently learning how to code in HTML and CSS.</p>
                 </td>
             </tr>
         </table>
 
-        <br><hr><br>
+        <br><br>
 
-        <!-- Skills Section -->
-        <a name="skills"></a>
-        <h2 class="section-title">My Technical Skills</h2>
-        <p>Here are the things I am currently learning in school and online:</p>
-        <ul>
-            <li>HTML5 (Basic tags and structure)</li>
-            <li>CSS (Colors, fonts, and inline styles)</li>
-            <li>JavaScript (Alert boxes and simple functions)</li>
-            <li>Microsoft Word & PowerPoint</li>
-        </ul>
+        <!-- Section 2: Skills -->
+        <h2><u>MY SKILLS</u></h2>
+        <div align="left">
+            <!-- Mixing ordered list tags inside unordered list improperly -->
+            <ul>
+                <li>Graphic Design & Editing</li>
+                <li>Digital Illustration</li>
+                <ol>
+                    <li>Vector Art</li>
+                    <li>Drawing</li>
+                </ol>
+                <li>Basic HTML & CSS</li>
+                <!-- Unclosed list item tag -->
+                <li>Photo Editing
+                <li>Microsoft Word / Office
+            </ul>
+        </div>
 
-        <br><hr><br>
+        <br><br>
 
-        <!-- Projects Section -->
-        <a name="projects"></a>
-        <h2 class="section-title">My Projects Table</h2>
-        <p>Check out my latest assignments and creations below:</p>
-
-        <table cellspacing="0" cellpadding="5">
-            <tr>
+        <!-- Section 3: Projects -->
+        <h2><u>MY PROJECTS</u></h2>
+        <!-- Table with mismatched column counts and inline styling overrides -->
+        <table border="3" bordercolor="green" bgcolor="lightgray" width="80%">
+            <tr bgcolor="yellow">
                 <th>Project Name</th>
-                <th>Type</th>
-                <th>Year</th>
+                <th>Category</th>
                 <th>Link</th>
             </tr>
             <tr>
-                <td>First HTML Page</td>
-                <td>Homework</td>
-                <td>2026</td>
-                <td><a href="#">Click Here</a></td>
+                <td>Poster Design 1</td>
+                <td>Graphics</td>
+                <td><a href="project1.html">View Project</a></td>
             </tr>
             <tr>
-                <td>Calculator App</td>
-                <td>JavaScript</td>
-                <td>2026</td>
-                <td><a href="#">Click Here</a></td>
+                <td>Vector Illustration</td>
+                <td>Art</td>
+                <!-- Missing link href target or empty attribute -->
+                <td><a href="">Click Here</a></td>
             </tr>
             <tr>
-                <td>Favorite Movies Fan Page</td>
-                <td>HTML & CSS</td>
-                <td>2026</td>
-                <td><a href="#">Click Here</a></td>
+                <td>My First Web Page</td>
+                <td>HTML</td>
+                <!-- Extra td tag breaking the table column structure -->
+                <td><a href="#">Link</a></td>
+                <td>Extra Column</td>
             </tr>
         </table>
 
-        <br><hr><br>
+        <br><br>
 
-        <!-- Contact Section -->
-        <a name="contact"></a>
-        <h2 class="section-title">Contact Me</h2>
-        <p>Fill out this form to send me a direct email message:</p>
-
-        <form action="#" method="get">
-            <p>
-                <label>Your Full Name:</label><br>
-                <input type="text" name="fullname" size="40" placeholder="Enter name here...">
+        <!-- Section 4: Contact -->
+        <h2><u>CONTACT ME</u></h2>
+        <!-- Form missing action/method, or using incorrect submit inputs -->
+        <form>
+            <p align="left">
+                Your Name:<br>
+                <input type="text" name="name" size="30">
             </p>
-            <p>
-                <label>Your Email Address:</label><br>
-                <input type="text" name="email" size="40" placeholder="Enter email address...">
+            <p align="left">
+                Your Email:<br>
+                <!-- Using type="text" for email input instead of type="email" -->
+                <input type="text" name="email" size="30">
             </p>
-            <p>
-                <label>Subject:</label><br>
-                <input type="text" name="subject" size="40">
+            <p align="left">
+                Message:<br>
+                <!-- Misspelled textarea attribute or unclosed tag -->
+                <textarea rows="5" cols="40" placeholder="Type message here..."></textarea>
             </p>
-            <p>
-                <label>Message:</label><br>
-                <textarea name="message" rows="5" cols="42" placeholder="Write message here..."></textarea>
-            </p>
-            <p>
-                <input type="submit" value="Send Message Now!" class="button-style" onclick="alert('Thank you! Your message has been sent!')">
-                <input type="reset" value="Clear Form">
+            <p align="left">
+                <!-- Inline JavaScript onclick alert instead of proper form handling -->
+                <input type="button" class="button" value="SEND MESSAGE" onclick="alert('Message Sent!')">
+                <input type="reset" value="Clear">
             </p>
         </form>
 
-    </div>
+        <br>
 
-    <footer>
-        <p>Copyright &copy; 2026 - Designed by Me. All Rights Reserved.</p>
-        <p>Best viewed in 1024x768 resolution.</p>
-    </footer>
+    </div>
+    </center>
+
+    <br>
+
+    <!-- Footer using obsolete tags -->
+    <div class="header-bg">
+        <center>
+            <p><font size="2" color="black">Copyright &copy; 2026. All Rights Reserved.</font></p>
+            <!-- Typo in anchor tag / misspelled attribute target -->
+            <p><a href="#top" targer="_self">Back to Top</a></p>
+        </center>
+    </div>
 
 </body>
 </html>
