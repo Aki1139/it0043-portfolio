@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Personal Website / Portfolio</title>
+    <style>
+        body {
+            background-color: lightcyan;
+            font-family: "Comic Sans MS", "Arial", sans-serif;
+            color: #333333;
+            margin: 0px;
+            padding: 0px;
+        }
+
+        header {
+            background-color: darkblue;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin: 0;
+        }
+
+        nav {
+            background-color: yellow;
+            padding: 10px;
+            text-align: center;
+            border-top: 2px solid black;
+            border-bottom: 2px solid black;
+        }
+
+        nav a {
+            color: blue;
+            font-weight: bold;
+            font-size: 18px;
+            margin-left: 15px;
+            margin-right: 15px;
+            text-decoration: underline;
+        }
+
+        nav a:hover {
+            color: red;
+            background-color: lightgreen;
+        }
+
+        .main-container {
+            width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+            background-color: white;
+            padding: 20px;
+            border: 3px dashed blue;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        .profile-img {
+            width: 200px;
+            height: 200px;
+            border: 5px solid red;
+            border-radius: 10px;
+        }
+
+        .section-title {
+            background-color: orange;
+            color: white;
+            padding: 5px;
+            font-size: 22px;
+            margin-top: 30px;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            font-size: 12px;
+        }
+
+        table {
+            border: 2px solid black;
+            width: 100%;
+            background-color: lightyellow;
+        }
+
+        th {
+            background-color: magenta;
+            color: white;
+        }
+
+        td {
+            border: 1px solid gray;
+            text-align: center;
+            padding: 8px;
+        }
+
+        .button-style {
+            background-color: green;
+            color: white;
+            font-size: 16px;
+            padding: 10px;
+            border: 2px solid black;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Welcome To My Awesome Website!!!</h1>
+        <p><i>"Hello world! This is my personal portfolio homepage."</i></p>
+    </header>
+
+    <nav>
+        <a href="#about">About Me</a> | 
+        <a href="#skills">My Skills</a> | 
+        <a href="#projects">Projects</a> | 
+        <a href="#contact">Contact Me</a>
+    </nav>
+
+    <marquee bgcolor="pink" behavior="scroll" direction="left" scrollamount="5">
+        <b><font color="darkred" size="4">*** WELCOME TO MY PAGE! FEEL FREE TO LOOK AROUND AND LEAVE A MESSAGE! ***</font></b>
+    </marquee>
+
+    <div class="main-container">
+
+        <!-- About Me Section -->
+        <a name="about"></a>
+        <h2 class="section-title">About Me</h2>
+        <table border="0" width="100%">
+            <tr>
+                <td width="30%" style="border:none;">
+                    <img src="https://via.placeholder.com/200" alt="My Picture" class="profile-img">
+                </td>
+                <td width="70%" style="border:none; text-align:left; padding-left:20px;">
+                    <p><b>Name:</b> Student Developer</p>
+                    <p><b>Hobby:</b> Coding, Gaming, Listening to Music</p>
+                    <p><b>Favorite Food:</b> Pizza and Ice Cream</p>
+                    <p>Hello! Welcome to my official online portfolio! I am currently learning how to build websites using HTML and CSS. This is my very first homepage built from scratch without using any templates!</p>
+                </td>
+            </tr>
+        </table>
+
+        <br><hr><br>
+
+        <!-- Skills Section -->
+        <a name="skills"></a>
+        <h2 class="section-title">My Technical Skills</h2>
+        <p>Here are the things I am currently learning in school and online:</p>
+        <ul>
+            <li>HTML5 (Basic tags and structure)</li>
+            <li>CSS (Colors, fonts, and inline styles)</li>
+            <li>JavaScript (Alert boxes and simple functions)</li>
+            <li>Microsoft Word & PowerPoint</li>
+        </ul>
+
+        <br><hr><br>
+
+        <!-- Projects Section -->
+        <a name="projects"></a>
+        <h2 class="section-title">My Projects Table</h2>
+        <p>Check out my latest assignments and creations below:</p>
+
+        <table cellspacing="0" cellpadding="5">
+            <tr>
+                <th>Project Name</th>
+                <th>Type</th>
+                <th>Year</th>
+                <th>Link</th>
+            </tr>
+            <tr>
+                <td>First HTML Page</td>
+                <td>Homework</td>
+                <td>2026</td>
+                <td><a href="#">Click Here</a></td>
+            </tr>
+            <tr>
+                <td>Calculator App</td>
+                <td>JavaScript</td>
+                <td>2026</td>
+                <td><a href="#">Click Here</a></td>
+            </tr>
+            <tr>
+                <td>Favorite Movies Fan Page</td>
+                <td>HTML & CSS</td>
+                <td>2026</td>
+                <td><a href="#">Click Here</a></td>
+            </tr>
+        </table>
+
+        <br><hr><br>
+
+        <!-- Contact Section -->
+        <a name="contact"></a>
+        <h2 class="section-title">Contact Me</h2>
+        <p>Fill out this form to send me a direct email message:</p>
+
+        <form action="#" method="get">
+            <p>
+                <label>Your Full Name:</label><br>
+                <input type="text" name="fullname" size="40" placeholder="Enter name here...">
+            </p>
+            <p>
+                <label>Your Email Address:</label><br>
+                <input type="text" name="email" size="40" placeholder="Enter email address...">
+            </p>
+            <p>
+                <label>Subject:</label><br>
+                <input type="text" name="subject" size="40">
+            </p>
+            <p>
+                <label>Message:</label><br>
+                <textarea name="message" rows="5" cols="42" placeholder="Write message here..."></textarea>
+            </p>
+            <p>
+                <input type="submit" value="Send Message Now!" class="button-style" onclick="alert('Thank you! Your message has been sent!')">
+                <input type="reset" value="Clear Form">
+            </p>
+        </form>
+
+    </div>
+
+    <footer>
+        <p>Copyright &copy; 2026 - Designed by Me. All Rights Reserved.</p>
+        <p>Best viewed in 1024x768 resolution.</p>
+    </footer>
+
+</body>
+</html>
