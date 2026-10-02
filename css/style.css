@@ -93,3 +93,33 @@ section {
   gap: var(--space-md);
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
+
+/* Subtopic 3: Navigation*/
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: var(--space-md);
+  padding: 0;
+  margin: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--color-text);
+  font-weight: 500;
+  padding: var(--space-xs) var(--space-sm);
+  border-radius: 4px;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--color-primary-hover);
+  background-color: rgba(13, 110, 253, 0.1);
+}
+
+nav a:focus,
+nav a:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
